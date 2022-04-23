@@ -1,22 +1,29 @@
-const arr = [null, 2, 3, null, false, 4, "", "test", 5, 6, 7]
-let count = 0
-for (let i = 0; i < arr.length; i++) {
-    // for (let j = i; j < arr.length - 1; j++) {
-    //     if (!arr[j] || typeof arr[j] !== "number") {
-    //         // arr[j] = arr[j + 1]
-    //         // arr[j + 1] = undefined
+let arr = [2, 7, 11, 15]
+// let currentIndex;
+// let lastIndex;
+// function getResultNine() {
+//     for (let i = 0; i < arr.length; i++) {
+//         let result = arr[i] + arr[i - 1]
+//         if (result === 9) {
+//             currentIndex = i
+//             lastIndex = i - 1
+//         }
+//     }
 
-    //     }
-    // }
-    for (let j =0;j<arr.length;j++){
-        if (!arr[i] || typeof arr[i] !== "number") {
-            arr.splice(i, 1)
+//     return [lastIndex, currentIndex]
+// }
+
+// console.log(getResultNine())
+
+let sum = 0
+let indexArray = []
+function getNine() {
+    for (let i = 0; i < arr.length; i++) {
+        if (sum !== 9) {
+            indexArray.push(i)
+            sum += arr[i]
         }
     }
-
-    // if (typeof arr[i] === "undefined") {
-    //     count++
-    // }
+    return { sum, index: indexArray }
 }
-// arr.length = arr.length - count
-console.log(arr)
+console.log(getNine())
