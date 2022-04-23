@@ -1,4 +1,4 @@
-let arr = [2, 7, 11, 15]
+// let arr = [2, 7, 15, 10, 12, 19, 45, 23, 56, 5, 13]
 // let currentIndex;
 // let lastIndex;
 // function getResultNine() {
@@ -14,16 +14,19 @@ let arr = [2, 7, 11, 15]
 // }
 
 // console.log(getResultNine())
-
+let arr = [2, 7, 15, 10, 12, 19, 45, 23, 56, 5, 13]
 let sum = 0
 let indexArray = []
-function getNine() {
+function getNine(number) {
     for (let i = 0; i < arr.length; i++) {
-        if (sum !== 9) {
+        if (sum > number) {
+            return { sum, message: "Targeted Value Not found!" }
+        }
+        else if (sum !== number) {
             indexArray.push(i)
             sum += arr[i]
-        }
+        } 
     }
     return { sum, index: indexArray }
 }
-console.log(getNine())
+console.log(getNine(10))
