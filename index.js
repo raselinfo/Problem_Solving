@@ -1,32 +1,46 @@
-// let arr = [2, 7, 15, 10, 12, 19, 45, 23, 56, 5, 13]
-// let currentIndex;
-// let lastIndex;
-// function getResultNine() {
-//     for (let i = 0; i < arr.length; i++) {
-//         let result = arr[i] + arr[i - 1]
-//         if (result === 9) {
-//             currentIndex = i
-//             lastIndex = i - 1
-//         }
-//     }
 
-//     return [lastIndex, currentIndex]
-// }
+function getDiagonalSum(numbers) {
+    let result = numbers.reduce((acc, curr, index) => {
+        let leftToRight = diagonalSum("leftToRight", index, curr)
+        let rightToLeft = diagonalSum("rightToLeft", index, curr)
+        acc += (leftToRight + rightToLeft)
+        return acc
+    }, 0)
 
-// console.log(getResultNine())
-let arr = [2, 7, 15, 10, 12, 19, 45, 23, 56, 5, 13]
-let sum = 0
-let indexArray = []
-function getNine(number) {
-    for (let i = 0; i < arr.length; i++) {
-        if (sum > number) {
-            return { sum, message: "Targeted Value Not found!" }
-        }
-        else if (sum !== number) {
-            indexArray.push(i)
-            sum += arr[i]
-        } 
-    }
-    return { sum, index: indexArray }
+    return result
 }
-console.log(getNine(10))
+
+
+function diagonalSum(type, index, curr) {
+    if (index === 0) {
+        if (type === 'leftToRight') {
+            return curr[0]
+        } else {
+            return curr[2]
+        }
+    } else if (index === 1) {
+        if (type === "leftToRight") {
+            return curr[1]
+        } else {
+            return curr[1]
+        }
+    } else {
+        if (type === "leftToRight") {
+            return curr[2]
+        } else {
+            return curr[0]
+        }
+    }
+}
+
+
+const numbers = [
+    [3, 2, 3],
+    [3, 4, 5],
+    [5, 6, 7]
+];
+
+console.time('time')
+let result = getDiagonalSum(numbers)
+console.timeEnd('time');
+
