@@ -1,39 +1,20 @@
-// // Function Literal
-// // function test() {
-// //     return true
-// // }
+// array = [1,3]
+// target = 2
 
-// // treat as a value
-// // we can change the value of an function
 
-// /**
-//  *
-//  * @constraint
-//  * 1. we can't access the value outer the scope
-//  */
-// let test = function test() {
-//     return true
-// }
-// console.log(test)
+function getPosition(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        let item = arr[i]
+        if (item === target) {
+            return i
+        } else {
+            if ((item < target) && (target < (arr[i + 1] == undefined ? target + 1 : arr[i + 1]))) {
+                return i + 1
+            }
+        }
 
-// // test = 5
-
-function test() {
-    return true
+    }
 }
-
-
-// const newTestFunc = test
-// console.log(newTestFunc.toString())
-
-// const arr = [test, newTestFunc]
-// let obj = { fn: test }
-// console.log(arr[1].toString())
-// console.log(obj.fn.toString())
-
-
-function callOthersFunc(test) {
-    return test
-}
-
-console.log(callOthersFunc(test).toString())
+const arr = [1, 3, 7]
+const target = 8
+console.log(getPosition(arr, target))
