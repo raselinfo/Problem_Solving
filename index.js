@@ -5,6 +5,7 @@
 function getPosition(arr, target) {
     for (let i = 0; i < arr.length; i++) {
         let item = arr[i]
+        if (target === 0) return 0
         if (item === target) {
             return i
         } else {
@@ -15,6 +16,6 @@ function getPosition(arr, target) {
 
     }
 }
-const arr = [1, 3, 7]
+const arr = [1, 3, 7, 100]
 const target = 8
-console.log(getPosition(arr, target))
+console.log(getPosition(arr, target)) 
