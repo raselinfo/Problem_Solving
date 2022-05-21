@@ -57,21 +57,75 @@
 //     return random1 / random2
 // }
 
-// function randomCalculation(max, cb) {
-//     const random1 = Math.floor(Math.random() * 5 + 1)
-//     const random2 = Math.floor(Math.random() * 5 + 1)
-//     return cb(random1, random2)
+function randomCalculation(max, cb) {
+    const random1 = Math.floor(Math.random() * 5 + 1)
+    const random2 = Math.floor(Math.random() * 5 + 1)
+    return cb(random1, random2)
+}
+
+const sum = randomCalculation(Math.max(5, 10), function (random1, random2) {
+    return random1 + random2
+})
+
+const sub = randomCalculation(Math.max(6, 7), (random1, random2) =>  random1 - random2)
+
+const mul = randomCalculation(Math.max(6, 7), (random1, random2) => random1 * random2)
+
+const div = randomCalculation(Math.max(6, 7), (random1, random2) =>  random1 / random2)
+console.log(sum)
+
+
+// const a = 10;
+// function mostOuter() {
+//     function outer() {
+//         console.log(a);
+//     }
 // }
 
-// const sum = randomCalculation(Math.max(5, 10), function (random1, random2) {
-//     return random1 + random2
-// })
+// function mostOuter() {
+//     function outer() {
+//         const a = 10;
+//         console.log(a);
+//     }
+// }
 
-// const sub = randomCalculation(Math.max(6, 7), (random1, random2) =>  random1 - random2)
+// {
+//     const a = "rasel"
+// }
+// console.log(a)
 
-// const mul = randomCalculation(Math.max(6, 7), (random1, random2) => random1 * random2)
+// function A(a) {
+//     console.log('I am A');
+// }
 
-// const div = randomCalculation(Math.max(6, 7), (random1, random2) =>  random1 / random2)
-// console.log(sum)
+// function B() {
+//     A();
+// }
 
+// function C() {
+//     B();
+//     B();
+// }
+// function D() {
+//     C();
+//     A();
+// }
 
+// D();
+
+// let value = (function () {
+//     return "Rasel"
+// })()
+// console.log(value)
+
+// (()=>{
+//     console.log("iif")
+// })()
+// const add = (function () {
+//     let counter = 0;
+//     return function () { counter += 1; return counter }
+// });
+
+// add();
+// add();
+// console.log(add())
