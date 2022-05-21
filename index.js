@@ -1,39 +1,26 @@
-// // Function Literal
-// // function test() {
-// //     return true
-// // }
+// myFunc()
+// // Function Statement
+// function myFunc() { }
 
-// // treat as a value
-// // we can change the value of an function
+// // Function Expression
+// myTextFunc()
+// const myTextFunc = function () {
 
-// /**
-//  *
-//  * @constraint
-//  * 1. we can't access the value outer the scope
-//  */
-// let test = function test() {
-//     return true
 // }
-// console.log(test)
+// myTextFunc()
+// // Fat Arrow Function => function expression
+// myFatFunc()
+// const myFatFunc = () => { 
 
-// // test = 5
+// }
 
-function test() {
-    return true
+// myFatFunc()
+
+// myFunc()
+
+let limit = 50
+function changeLimit() {
+    limit = 5000
+    return limit
 }
-
-
-// const newTestFunc = test
-// console.log(newTestFunc.toString())
-
-// const arr = [test, newTestFunc]
-// let obj = { fn: test }
-// console.log(arr[1].toString())
-// console.log(obj.fn.toString())
-
-
-function callOthersFunc(test) {
-    return test
-}
-
-console.log(callOthersFunc(test).toString())
+console.log(changeLimit())
