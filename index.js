@@ -1,131 +1,21 @@
-// let limit = 100
+const toggle = document.querySelector("#toggle");
+const body = document.querySelector("body");
+// let switchMood = "light"
+toggle.addEventListener("click", () => {
+    if (body.className === "dark") {
+        body.className = "light"
+    } else {
+        body.className = "dark"
+    }
+    // console.log(switchMood)
+    // if (switchMood = "light") {
+    //     body.style.backgroundColor = "black"
+    //     switchMood = "dark"
+    //     console.log("I am Dark")
+    // } else {
+    //     body.style.backgroundColor = "white"
+    //     switchMood = "light"
+    //     console.log("I am Light")
+    // }
 
-// function test() {
-//     limit = 50
-//     return limit
-// }
-
-// console.log(test(3))
-// console.log(limit)
-
-// function test(arr, data) {
-//     // let newArr=arr
-//     // newArr.push(data)
-//     // return newArr
-//     console.log("hello")
-// }
-// let arr = [1, 2, 3, 4]
-// console.log(test(arr, 5))
-// console.log(arr)
-
-// let a = 10;
-//     let b = 10
-// function test(a,b) {
-//     // let a=40;
-//     // let b=80
-//     return a + b
-// }
-
-// console.log(test(5, 6))
-
-// const randomSum = (max) => {
-//     const random1 = Math.floor(Math.random() * 5 + 1)
-//     const random2 = Math.floor(Math.random() * 5 + 1)
-
-//     return random1 + random2
-// }
-
-// const randomSub = (max) => {
-//     const random1 = Math.floor(Math.random() * 5 + 1)
-//     const random2 = Math.floor(Math.random() * 5 + 1)
-
-//     return random1 - random2
-// }
-
-
-// const randomMulti = (max) => {
-//     const random1 = Math.floor(Math.random() * 5 + 1)
-//     const random2 = Math.floor(Math.random() * 5 + 1)
-
-//     return random1 * random2
-// }
-
-// const randomDiv = (max) => {
-//     const random1 = Math.floor(Math.random() * 5 + 1)
-//     const random2 = Math.floor(Math.random() * 5 + 1)
-
-//     return random1 / random2
-// }
-
-function randomCalculation(max, cb) {
-    const random1 = Math.floor(Math.random() * 5 + 1)
-    const random2 = Math.floor(Math.random() * 5 + 1)
-    return cb(random1, random2)
-}
-
-const sum = randomCalculation(Math.max(5, 10), function (random1, random2) {
-    return random1 + random2
 })
-
-const sub = randomCalculation(Math.max(6, 7), (random1, random2) =>  random1 - random2)
-
-const mul = randomCalculation(Math.max(6, 7), (random1, random2) => random1 * random2)
-
-const div = randomCalculation(Math.max(6, 7), (random1, random2) =>  random1 / random2)
-console.log(sum)
-
-
-// const a = 10;
-// function mostOuter() {
-//     function outer() {
-//         console.log(a);
-//     }
-// }
-
-// function mostOuter() {
-//     function outer() {
-//         const a = 10;
-//         console.log(a);
-//     }
-// }
-
-// {
-//     const a = "rasel"
-// }
-// console.log(a)
-
-// function A(a) {
-//     console.log('I am A');
-// }
-
-// function B() {
-//     A();
-// }
-
-// function C() {
-//     B();
-//     B();
-// }
-// function D() {
-//     C();
-//     A();
-// }
-
-// D();
-
-// let value = (function () {
-//     return "Rasel"
-// })()
-// console.log(value)
-
-// (()=>{
-//     console.log("iif")
-// })()
-// const add = (function () {
-//     let counter = 0;
-//     return function () { counter += 1; return counter }
-// });
-
-// add();
-// add();
-// console.log(add())
