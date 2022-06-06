@@ -113,3 +113,33 @@ const getData = (url) => new Promise.resolve()
 //     }).catch(err=>{
 //         console.log(err)
 //     })
+
+
+// fetch('https://jsonplaceholder.typicode.com/users')
+//         .then(response => response.json())
+//         .then(value => {
+//             resolve(value)
+//         }).catch(err => {
+//             reject(err.message)
+//         })
+
+async function getUsers() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    const data = await response.json()
+    console.log(data)
+}
+getUsers()
+
+const get = (url) => Promise.resolve();
+
+async function getUserName(username) {
+    try {
+        const mainUser = await get(`/users?username=${username}`);
+        const posts = await get(`/posts?user_id=${mainUser.id}`);
+        const comments = await get(`/comments?post_id=${posts[0].id}`);
+        const user = await get(`/users?username=${comments[0].username}`);
+        console.log(user);
+    } catch (e) {
+        console.log(e);
+    }
+}
