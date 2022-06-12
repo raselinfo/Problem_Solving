@@ -1,6 +1,7 @@
 ### Diagonal Difference (Result should be positive)
 
 Pseudo code
+
 ```js
 Input = [
   [11, 2, 4],
@@ -10,6 +11,8 @@ Input = [
 
 Result = 11 + 5 + -12 - (4 + 5 + 10);
 ```
+
+Code :
 
 ```js
 const processData = (arr) => {
