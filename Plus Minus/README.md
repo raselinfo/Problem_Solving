@@ -3,6 +3,9 @@
 Pseudo Code:
 
 ```js
+Start
+
+
 Input = [-4, 3, -9, 0, 4, 1];
 N = Input.length;
 positive_number = 3;
@@ -14,6 +17,8 @@ negative_ratio = negative_number / N;
 zero_ratio = zero_number / N;
 
 Output = positive_ratio, negative_ratio, zero_ratio;
+
+Stop
 ```
 Code :
 ```js

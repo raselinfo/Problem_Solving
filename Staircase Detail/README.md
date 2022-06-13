@@ -3,6 +3,8 @@
 Pseudo Code:
 
 ```js
+Start
+
 Input = 6;
 stair = ""
 For i=1 to Input; i++
@@ -12,6 +14,8 @@ For i=1 to Input; i++
         stair+="#"
     
     stair+="\n"
+
+Stop
 ```
 
 Code :

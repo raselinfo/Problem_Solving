@@ -3,6 +3,9 @@
 Pseudo code
 
 ```js
+Start
+
+
 Input = [
   [11, 2, 4],
   [4, 5, 6],
@@ -10,6 +13,8 @@ Input = [
 ];
 
 Result = 11 + 5 + -12 - (4 + 5 + 10);
+
+Stop
 ```
 
 Code :
