@@ -3,7 +3,7 @@
 Pseudo Code:
 
 ```js
-Start
+Start-
 
 Input = 6;
 stair = ""
@@ -24,7 +24,9 @@ Output=
   #####
  ######
 #######
-Stop
+
+
+Stop-
 ```
 
 Code :
